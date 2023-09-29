@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(219.3deg, rgb(149, 0, 199) 4.7%, rgb(130, 0, 226) 22.9%, rgb(95, 0, 199) 43.2%, rgb(70, 0, 199) 63.9%, rgb(5, 0, 199) 85.1%, rgb(0, 95, 199) 106.8%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    gap: 20px;
+}
+
+.container h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 1px #F8F8F8;
+    text-shadow: 0px 2px 4px blue;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+}
+
+.game-board .cells {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
+    border: solid 2px #fff;
+    font-size: 60px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px #F8F8F8;
+    text-shadow: 0px 1px 4px #23430C;
+    cursor: pointer;
+}
+
+.game-board .cells:nth-child(3n) {
+    border-right: none;
+}
+
+.game-board .cells:nth-child(3n+1) {
+    border-left: none;
+}
+
+.game-board .cells:nth-child(-n+3) {
+    border-top: none;
+}
+
+.game-board .cells:nth-child(n+7) {
+    border-bottom: none;
+}
+
+.players {
+    display: flex;
+    column-gap: inherit;
+    margin-block: 15px;
+}
+
+.players .player {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.players .player span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button {
+    background-color: aliceblue;
+    padding: 10px 40px;
+    border: none;
+    outline: none;
+    transition: all .4s;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#msg-box {
+    margin-block-end: 15px;
+}
